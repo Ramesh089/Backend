@@ -43,28 +43,35 @@ root/
 │   ├── vite.config.js
 │   └── package.json
 
-📋 Requirements
+ ### 📋 Requirements
 🟢 Node.js (v14 or higher)
 📦 npm (comes with Node.js)
 💻 VS Code or any code editor
 🌐 Web browser (Chrome, Edge, etc.)
 🔧 Git
 ⚙️ Backend Setup
-1️⃣ Navigate to backend
+
+###1️⃣ Navigate to backend
 cd backend
-2️⃣ Install dependencies
+
+###2️⃣ Install dependencies
 npm install express cors
-3️⃣ Run server
+
+###3️⃣ Run server
 node server.js
-📡 API Endpoint
+
+###📡 API Endpoint
 Method	Endpoint	Description
 GET	/api/jokes	Fetch all jokes
-🎨 Frontend Setup
+
+###🎨 Frontend Setup
 1️⃣ Navigate to frontend
 cd frontend
-2️⃣ Install dependencies
+
+###2️⃣ Install dependencies
 npm install axios
-3️⃣ Run frontend
+
+###3️⃣ Run frontend
 npm run dev
 🔗 Proxy Configuration (Vite)
 
@@ -77,16 +84,20 @@ export default {
     }
   }
 };
-✅ Benefits
+
+###✅ Benefits
 No need to write full backend URL
 Avoids browser CORS blocking
+
 Cleaner API calls
+
 📡 API Integration (Frontend)
 useEffect(() => {
   axios.get("/api/jokes")
     .then((res) => setJokes(res.data))
     .catch((err) => console.log(err))
 }, []);
+
 🔒 CORS Handling (Backend)
 import cors from "cors";
 
@@ -119,12 +130,14 @@ Fix: Use .map() to render arrays
 🛠️ Handling real-world errors
 🧱 Building clean project structure
 🚀 Following fullstack best practices
+
 ✅ Best Practices Followed
 ✔️ Separation of frontend and backend
 ✔️ Clean API structure (/api/...)
 ✔️ Proxy for development
 ✔️ CORS for backend security
 ✔️ Proper React state management
+
 🚀 Future Improvements
 ➕ Add POST API (create jokes)
 ⏳ Add loading & error UI
