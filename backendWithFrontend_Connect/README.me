@@ -1,23 +1,36 @@
-🚀 Fullstack Frontend–Backend Integration (React + Express)
-📌 Overview
+# 🚀 Fullstack Frontend–Backend Integration (React + Express)
 
-This project demonstrates how to connect a React frontend with a Node.js + Express backend using modern fullstack practices.
+---
 
-✨ It covers:
-🔗 API communication between frontend and backend
-🔒 Handling CORS (Cross-Origin Resource Sharing)
-🔄 Using Proxy configuration for seamless development
-🎯 Rendering dynamic data in React
-🛠️ Tech Stack
-🎨 Frontend
-React (Vite)
-Axios
-JavaScript (ES6+)
-⚙️ Backend
-Node.js
-Express.js
-CORS
-📂 Project Structure
+## 📌 Overview
+
+This project demonstrates how to connect a **React frontend** with a **Node.js + Express backend** using modern fullstack practices.
+
+### ✨ It covers:
+- 🔗 API communication between frontend and backend  
+- 🔒 Handling CORS (Cross-Origin Resource Sharing)  
+- 🔄 Using Proxy configuration for seamless development  
+- 🎯 Rendering dynamic data in React  
+
+---
+
+## 🛠️ Tech Stack
+
+### 🎨 Frontend
+- React (Vite)  
+- Axios  
+- JavaScript (ES6+)  
+
+### ⚙️ Backend
+- Node.js  
+- Express.js  
+- CORS  
+
+---
+
+## 📂 Project Structure
+
+```bash
 root/
 │
 ├── backend/
@@ -29,6 +42,13 @@ root/
 │   │   └── App.jsx
 │   ├── vite.config.js
 │   └── package.json
+
+📋 Requirements
+🟢 Node.js (v14 or higher)
+📦 npm (comes with Node.js)
+💻 VS Code or any code editor
+🌐 Web browser (Chrome, Edge, etc.)
+🔧 Git
 ⚙️ Backend Setup
 1️⃣ Navigate to backend
 cd backend
@@ -68,9 +88,6 @@ useEffect(() => {
     .catch((err) => console.log(err))
 }, []);
 🔒 CORS Handling (Backend)
-
-CORS is enabled to allow frontend requests:
-
 import cors from "cors";
 
 app.use(cors());
