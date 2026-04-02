@@ -1,0 +1,117 @@
+🚀 Fullstack Frontend–Backend Integration (React + Express)
+📌 Overview
+
+This project demonstrates how to connect a React frontend with a Node.js + Express backend using modern fullstack practices.
+
+It covers:
+
+API communication between frontend and backend
+Handling CORS (Cross-Origin Resource Sharing)
+Using Proxy configuration for seamless development
+Rendering dynamic data in React
+🛠️ Tech Stack
+🎨 Frontend
+React (Vite)
+Axios
+JavaScript (ES6+)
+⚙️ Backend
+Node.js
+Express.js
+CORS
+📂 Project Structure
+root/
+│
+├── backend/
+│   ├── server.js
+│   └── package.json
+│
+├── frontend/
+│   ├── src/
+│   │   └── App.jsx
+│   ├── vite.config.js
+│   └── package.json
+⚙️ Backend Setup
+1️⃣ Navigate to backend
+cd backend
+2️⃣ Install dependencies
+npm install express cors
+3️⃣ Run server
+node server.js
+📡 API Endpoint
+Method	Endpoint	Description
+GET	/api/jokes	Fetch all jokes
+🎨 Frontend Setup
+1️⃣ Navigate to frontend
+cd frontend
+2️⃣ Install dependencies
+npm install axios
+3️⃣ Run frontend
+npm run dev
+🔗 Proxy Configuration (Vite)
+
+To avoid CORS issues during development:
+
+export default {
+  server: {
+    proxy: {
+      "/api": "http://localhost:3000"
+    }
+  }
+};
+✅ Benefit
+No need to write full backend URL
+Avoids browser CORS blocking
+Cleaner API calls
+📡 API Integration (Frontend)
+useEffect(() => {
+  axios.get("/api/jokes")
+    .then((res) => setJokes(res.data))
+    .catch((err) => console.log(err))
+}, []);
+🔒 CORS Handling (Backend)
+
+CORS is enabled to allow frontend requests:
+
+import cors from "cors";
+
+app.use(cors());
+⚠️ Common Issues & Solutions
+❌ CORS Error
+
+Cause: Different origin (port/domain)
+
+Solution:
+
+Enable CORS in backend
+Use proxy in frontend
+❌ Infinite API Calls
+
+Cause: Missing dependency array in useEffect
+
+useEffect(() => {}, []) // ✅ correct
+❌ Axios Import Error
+npm install axios
+❌ React Rendering Error (Objects not valid)
+
+Fix: Use .map() to render arrays
+
+🧠 Key Learnings
+How frontend communicates with backend using APIs
+Difference between Proxy vs CORS
+Handling real-world errors (CORS, API issues)
+Clean and scalable project structure
+Best practices for fullstack development
+✅ Best Practices Followed
+Separation of frontend and backend
+Clean API structure (/api/...)
+Proxy for development environment
+CORS configuration for backend
+Proper state management in React
+🚀 Future Improvements
+Add POST API (create jokes)
+Add loading & error UI
+Connect database (MongoDB)
+Deploy frontend & backend
+🎯 Conclusion
+
+This project provides a strong foundation for understanding fullstack development by connecting a React frontend with an Express backend using industry-standard practices like Proxy and CORS.
